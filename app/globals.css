@@ -1,0 +1,127 @@
+/* app/globals.css */
+
+/* ── Import Tailwind ──────────────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables globales ───────────────────────────────────────── */
+:root {
+  --bleu-ciel: #7cbee9;
+  --orange-vif: #f47820;
+  --vert-moyen: #74a641;
+  --vert-fonce: #29783b;
+  --sable: #ceaa74;
+  --bleu-eau: #5fb0cc;
+
+  /* Fonts injectées via next/font (étape 2) */
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* ── Reset & base ─────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Évite le scroll horizontal parasite */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  /* Anti-aliasing optimal */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Utilitaires Tailwind custom (@layer) ─────────────────────────── */
+@layer components {
+  /* Bouton principal orange */
+  .btn-primary {
+    @apply bg-orange-vif text-white font-poppins font-bold 
+           px-8 py-4 rounded-full 
+           transition-all duration-300 
+           hover:brightness-110 hover:shadow-lg 
+           active:scale-95;
+  }
+
+  /* Bouton secondaire vert */
+  .btn-secondary {
+    @apply bg-vert-fonce text-white font-poppins font-bold 
+           px-8 py-4 rounded-full 
+           transition-all duration-300 
+           hover:bg-vert-moyen hover:shadow-lg 
+           active:scale-95;
+  }
+
+  /* Titre section */
+  .section-title {
+    @apply font-poppins font-black text-4xl md:text-5xl 
+           leading-tight tracking-tight;
+  }
+
+  /* Container centré standard */
+  .container-main {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Vignette noire sur les bords (Hero) */
+  .vignette {
+    background: radial-gradient(
+      ellipse at center,
+      transparent 50%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  }
+
+  /* Texte gradient orange→jaune pour les jackpots */
+  .text-gradient-jackpot {
+    background: linear-gradient(135deg, #f47820, #ffb347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Masonry grid pour la galerie */
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .masonry-grid {
+      column-count: 1;
+    }
+  }
+
+  /* Break inside pour les items masonry */
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ── Focus visible accessible ─────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--orange-vif);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
