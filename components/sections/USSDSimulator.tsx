@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import PhoneMockup from "@/components/ui/PhoneMockup";
 import { gainsData, formatFCFA, type MiseType } from "@/lib/gains";
 
@@ -27,12 +27,6 @@ type ScreenId =
   | "en-savoir-plus"
   | "termes"
   | "solde-insuffisant";
-
-interface Screen {
-  id: ScreenId;
-  title: string;
-  content: React.ReactNode;
-}
 
 // ══════════════════════════════════════════════════════════════════
 // COMPOSANTS UI USSD
@@ -326,7 +320,7 @@ function JouerScreen({
 export default function USSDSimulator() {
   const [currentScreen, setCurrentScreen] = useState<ScreenId>("home");
   const [history, setHistory] = useState<ScreenId[]>([]);
-  const [selectedMise, setSelectedMise] = useState<MiseType>(100);
+  const [, setSelectedMise] = useState<MiseType>(100);
 
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
