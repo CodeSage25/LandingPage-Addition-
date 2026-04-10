@@ -4,6 +4,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import type { Variants } from "framer-motion";
 
 // ══════════════════════════════════════════════════════════════════
 // ICÔNES SVG — Pas de dépendance externe
@@ -76,7 +77,7 @@ function LogoPMUC() {
 // VARIANTS
 // ══════════════════════════════════════════════════════════════════
 
-const colVariants = {
+const colVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
@@ -84,7 +85,7 @@ const colVariants = {
     transition: {
       duration: 0.6,
       delay: i * 0.15,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   }),
 };
