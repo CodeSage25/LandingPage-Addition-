@@ -22,47 +22,6 @@ function IconFacebook() {
   );
 }
 
-// Trèfle SVG animé custom
-function CloverSVG({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      className={className}
-      fill="none"
-      aria-hidden="true"
-    >
-      {/* Feuille haut */}
-      <ellipse cx="50" cy="28" rx="18" ry="22" fill="#74A641" opacity="0.9" />
-      {/* Feuille gauche */}
-      <ellipse
-        cx="28"
-        cy="55"
-        rx="22"
-        ry="18"
-        fill="#29783B"
-        opacity="0.9"
-        transform="rotate(-15 28 55)"
-      />
-      {/* Feuille droite */}
-      <ellipse
-        cx="72"
-        cy="55"
-        rx="22"
-        ry="18"
-        fill="#29783B"
-        opacity="0.9"
-        transform="rotate(15 72 55)"
-      />
-      {/* Feuille bas */}
-      <ellipse cx="50" cy="68" rx="18" ry="22" fill="#74A641" opacity="0.9" />
-      {/* Centre */}
-      <circle cx="50" cy="50" r="10" fill="#F47820" />
-      {/* Tige */}
-      <rect x="47" y="68" width="6" height="18" rx="3" fill="#29783B" />
-    </svg>
-  );
-}
-
 // Logo Orange Money placeholder
 function LogoOrangeMoney() {
   return (
