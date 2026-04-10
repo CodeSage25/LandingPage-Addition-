@@ -194,7 +194,7 @@ export default function Footer() {
               className="flex-shrink-0"
             >
               <Image
-                src="/images/logo-lala.jpeg"
+                src="/images/logo-lala.png"
                 alt="Logo Là Là Là"
                 width={120}
                 height={120}
@@ -428,7 +428,7 @@ export default function Footer() {
               "
             >
               <p className="font-inter text-white/40 text-xs leading-relaxed">
-                Jeu responsable · Jouez raisonnablement. +21.
+                Jeu responsable · +21.
               </p>
             </div>
           </motion.div>
