@@ -73,13 +73,13 @@ export default function GroupSection() {
             "
             >
               Le groupe des gagnants,{" "}
-              <span className="text-orange-vif">en toute clarté</span>
+              <span className="text-white">en toute clarté</span>
             </h2>
 
             {/* Description */}
             <p className="mt-3 font-inter text-sm leading-relaxed text-white/70">
-              Rejoignez la communauté des gagnants Là Là Là. Chaque jour, des
-              abonnés Orange remportent des gains instantanés en composant
+              Rejoignez la communauté des gagnants Là Là Là. Chaque jour, de
+              nombreux parieurs remportent des gains instantanés en composant
               simplement le{" "}
               <span className="font-poppins font-bold text-white">
                 #150*52#
@@ -172,10 +172,10 @@ export default function GroupSection() {
                   whileTap={{ scale: 0.98 }}
                   className="
                     inline-flex items-center justify-center gap-3
-                    rounded-full bg-orange-vif
+                    rounded-full bg-vert-fonce
                     px-6 py-3
                     font-poppins text-sm font-semibold text-white
-                    shadow-lg shadow-orange-500/20
+                    shadow-lg shadow-vert-500/20
                     ring-1 ring-orange-300/20
                     transition-colors duration-200
                     hover:brightness-110

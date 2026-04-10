@@ -164,7 +164,7 @@ export default function VideoSection() {
 
           <p className="font-inter text-white/50 text-lg max-w-md mx-auto">
             Plongez dans l&apos;ambiance unique du jeu qui fait gagner des
-            milliers d&apos;abonnés Orange chaque jour.
+            milliers de parieurs chaque jour.
           </p>
         </motion.div>
 

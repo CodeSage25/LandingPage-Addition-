@@ -1,16 +1,4 @@
-// next.config.mjs
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    formats: ["image/avif", "image/webp"],
-  },
-  reactStrictMode: true,
-};
+const nextConfig = {};
 
 export default nextConfig;

@@ -11,7 +11,7 @@ const STEPS = [
     id: 1,
     emoji: "📱",
     title: "Composez",
-    description: "Composez le #150*52# sur votre téléphone Orange",
+    description: "Composez le #150*52# sur votre téléphone ",
     highlight: "#150*52#",
     color: "from-white/10 to-white/5",
     border: "border-white/20",
@@ -30,8 +30,8 @@ const STEPS = [
     emoji: "💰",
     title: "Misez",
     description:
-      "Choisissez votre mise : 100, 200 ou 400 FCFA selon votre budget",
-    highlight: "100 / 200 / 400 FCFA",
+      "Choisissez votre mise : 100 F, 200 F ou 400 FCFA selon votre budget",
+    highlight: "100 F , 200 F, 400 FCFA",
     color: "from-orange-vif/20 to-orange-vif/5",
     border: "border-orange-vif/30",
   },
@@ -244,7 +244,7 @@ export default function HowToPlay() {
 
           <p className="font-inter text-white/70 text-lg max-w-xl mx-auto">
             En 4 étapes simples, tentez de remporter jusqu&apos;à{" "}
-            <span className="font-poppins font-black text-orange-vif">
+            <span className="font-poppins font-black text-white">
               15 000 000 FCFA
             </span>
           </p>
@@ -300,7 +300,7 @@ export default function HowToPlay() {
             <div className="flex-1 text-center lg:text-left">
               <h3 className="font-poppins font-black text-2xl sm:text-3xl text-white mb-4">
                 Recevez vos résultats{" "}
-                <span className="text-orange-vif">par SMS</span>
+                <span className="text-white">par SMS</span>
               </h3>
               <p className="font-inter text-white/70 leading-relaxed mb-6">
                 Après chaque mise, vous recevez instantanément vos 5 numéros.

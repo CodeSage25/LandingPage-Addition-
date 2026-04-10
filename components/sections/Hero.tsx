@@ -148,21 +148,35 @@ export default function Hero() {
         style={{ height: "100dvh", minHeight: "600px" }}
       >
         {/* ── Image de fond ──────────────────────────────────────── */}
-        <div className="absolute inset-0 w-full h-full z-0 bg-black">
+        <div className="absolute inset-0 w-full h-full z-0">
+          {/* Desktop & Laptop — 16:9 */}
           <Image
-            src="/images/desktop.jpeg"
+            src="/images/background-desktop.jpeg"
             alt="Là Là Là — Tentez ta chance au #150*52#"
             fill
             priority
             quality={90}
-            className="hidden md:block object-cover object-center"
+            className="hidden lg:block object-cover object-center"
+            sizes="100vw"
+            style={{ opacity: 0.9, objectPosition: "center 10%" }}
+          />
+
+          {/* Tablette & petit laptop — 3:2 */}
+          <Image
+            src="/images/background.jpeg"
+            alt="Là Là Là — Tentez ta chance au #150*52#"
+            fill
+            priority
+            quality={90}
+            className="hidden md:block lg:hidden object-cover object-center"
             sizes="100vw"
             style={{ opacity: 0.9 }}
           />
-          {/* Image portrait — Mobile (ratio ~9:16) */}
+
+          {/* Mobile portrait — 9:16 */}
           <Image
-            src="/images/mobile-1.jpg.jpeg"
-            alt="Là Là Là"
+            src="/images/background-mobile.jpeg"
+            alt="Là Là Là — Tentez ta chance au #150*52#"
             fill
             priority
             quality={90}

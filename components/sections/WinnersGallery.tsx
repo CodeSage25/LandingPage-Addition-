@@ -51,7 +51,7 @@ export default function WinnersGallery() {
               px-4 py-1.5 rounded-full mb-4
             "
           >
-            <span>🏆</span>
+            <span></span>
             <span>Hall of Fame</span>
           </motion.div>
 
@@ -68,9 +68,7 @@ export default function WinnersGallery() {
             className="font-inter text-gray-500 text-lg max-w-xl mx-auto leading-relaxed"
           >
             Soyez parmi les{" "}
-            <span className="font-poppins font-bold text-orange-vif">
-              premiers gagnants
-            </span>{" "}
+            <span className="font-poppins font-bold ">premiers gagnants</span>{" "}
             et voyez votre ticket affiché ici.
           </motion.p>
 

@@ -3,6 +3,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 // ══════════════════════════════════════════════════════════════════
 // ICÔNES SVG — Pas de dépendance externe
@@ -97,7 +98,7 @@ function LogoPMUC() {
         rounded-xl px-4 py-2.5
       "
     >
-      <div className="w-8 h-8 rounded-xl bg-bleu-ciel flex items-center justify-center">
+      <div className="w-8 h-8 rounded-xl bg-[#E7177E] flex items-center justify-center">
         <span className="text-white font-poppins font-black text-xs">PM</span>
       </div>
       <div>
@@ -105,7 +106,7 @@ function LogoPMUC() {
           PMUC
         </p>
         <p className="font-inter text-white/50 text-[10px]">
-          Partenaire officiel
+          Pari Mutuel Urbain Camerounais
         </p>
       </div>
     </div>
@@ -226,34 +227,20 @@ export default function Footer() {
             animate={isInView ? "visible" : "hidden"}
             className="flex flex-col items-center md:items-start gap-6"
           >
-            {/* Logo texte + trèfle animé */}
-            <div className="flex items-center gap-3">
-              {/* Trèfle rotatif */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className="w-14 h-14 flex-shrink-0"
-              >
-                <CloverSVG className="w-full h-full" />
-              </motion.div>
-
-              {/* Texte logo */}
-              <div>
-                <h2
-                  className="font-poppins font-black text-3xl text-white leading-none"
-                  style={{
-                    textShadow: "0 2px 12px rgba(0,0,0,0.3)",
-                  }}
-                >
-                  Là Là Là
-                </h2>
-                <div className="w-full h-0.5 bg-orange-vif rounded-full mt-1" />
-              </div>
-            </div>
+            {/* Logo image */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+              className="flex-shrink-0"
+            >
+              <Image
+                src="/images/logo-lala.jpeg"
+                alt="Logo Là Là Là"
+                width={120}
+                height={120}
+                className="object-contain drop-shadow-lg"
+              />
+            </motion.div>
 
             {/* Tagline */}
             <p className="font-inter text-white/70 text-sm leading-relaxed text-center md:text-left max-w-xs">
@@ -269,7 +256,7 @@ export default function Footer() {
               className="
                 flex items-center gap-2
                 bg-orange-vif/20 border border-orange-vif/30
-                text-orange-vif font-poppins font-bold text-sm
+                text-white font-poppins font-bold text-sm
                 px-4 py-2 rounded-full
               "
             >
@@ -364,7 +351,7 @@ export default function Footer() {
                     group
                     ${
                       link.highlight
-                        ? "bg-orange-vif/15 border border-orange-vif/25 text-orange-vif font-semibold hover:bg-orange-vif/25"
+                        ? "bg-orange-vif/15 border border-orange-vif/25 text-white font-semibold hover:bg-orange-vif/25"
                         : "text-white/70 hover:text-white hover:bg-white/8"
                     }
                   `}
@@ -481,7 +468,7 @@ export default function Footer() {
               "
             >
               <p className="font-inter text-white/40 text-xs leading-relaxed">
-                🎲 Jeu responsable · Jouez raisonnablement.
+                Jeu responsable · Jouez raisonnablement. +21.
               </p>
             </div>
           </motion.div>
@@ -516,7 +503,7 @@ export default function Footer() {
             "
           >
             <p className="font-inter text-white/40 text-sm">
-              © 2026 Là Là Là · Réservé aux abonnés Orange
+              © 2026 Là Là Là ·
             </p>
 
             <div className="flex items-center gap-4">

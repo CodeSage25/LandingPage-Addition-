@@ -547,8 +547,8 @@ export default function USSDSimulator() {
             <USSDHeader title="En Savoir Plus" />
             <div className="flex-1 px-4 py-4 overflow-y-auto">
               <p className="font-inter text-xs text-gray-700 leading-relaxed">
-                Le jeu Là Là Là est accessible à tous les abonnés Orange Côte
-                d&apos;Ivoire.
+                Le jeu Là Là Là est accessible à tous les abonnés Orange
+                Cameroun.
                 {"\n\n"}
                 Composez <strong>#150*52#</strong>, misez entre 100 et 400 FCFA,
                 recevez 5 numéros par SMS et additionnez-les.
@@ -568,15 +568,14 @@ export default function USSDSimulator() {
             <USSDHeader title="Termes & Conditions" />
             <div className="flex-1 px-4 py-4 overflow-y-auto">
               <p className="font-inter text-xs text-gray-700 leading-relaxed">
-                Ce jeu est réservé aux abonnés Orange Côte d&apos;Ivoire
-                majeurs.
+                Ce jeu est réservé aux abonnés Orange Cameroun majeurs.
                 {"\n\n"}
                 La participation implique l&apos;acceptation du règlement en
                 vigueur. Le montant misé est débité immédiatement du solde
                 Orange Money.
                 {"\n\n"}
-                Les gains sont crédités sous 24h.
-                {"\n\n"}© 2025 Là Là Là · Jeu responsable.
+                Les gains sont crédités instantanément.
+                {"\n\n"}© 2026 Là Là Là · Jeu responsable.
               </p>
             </div>
             <BackButton onClick={goBack} />
@@ -643,7 +642,7 @@ export default function USSDSimulator() {
       />
 
       <div className="container-main relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* ── Colonne gauche : Texte + instructions ──────────── */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -654,11 +653,11 @@ export default function USSDSimulator() {
             {/* Badge */}
             <div
               className="
-                inline-flex items-center gap-2
-                bg-sable/30 border border-sable/50
-                text-vert-fonce font-inter text-sm
-                px-4 py-1.5 rounded-full mb-4
-              "
+              inline-flex items-center gap-2
+              bg-sable/30 border border-sable/50
+              text-vert-fonce font-inter text-sm
+              px-4 py-1.5 rounded-full mb-4
+            "
             >
               <span>📱</span>
               <span>Menu interactif</span>
@@ -670,7 +669,7 @@ export default function USSDSimulator() {
 
             <p className="font-inter text-gray-600 leading-relaxed mb-8 max-w-md">
               Naviguez dans le simulateur comme si vous étiez sur votre
-              téléphone Orange. Cliquez sur les options pour explorer toute
+              téléphone. Cliquez sur les options pour explorer toute
               l&apos;arborescence du menu.
             </p>
 
@@ -678,7 +677,7 @@ export default function USSDSimulator() {
             <div className="flex flex-col gap-3 mb-8">
               {[
                 { icon: "👆", text: "Cliquez sur une option pour naviguer" },
-                { icon: "← ", text: "Le bouton Retour revient en arrière" },
+                { icon: "←", text: "Le bouton Retour revient en arrière" },
                 { icon: "🔄", text: "Réinitialisez pour recommencer" },
               ].map((item, i) => (
                 <motion.div
@@ -696,7 +695,7 @@ export default function USSDSimulator() {
               ))}
             </div>
 
-            {/* Breadcrumb navigation */}
+            {/* Breadcrumb */}
             <div className="flex flex-wrap items-center gap-1 mb-4">
               <span className="font-inter text-xs text-gray-400">
                 Vous êtes :
@@ -771,6 +770,153 @@ export default function USSDSimulator() {
             </div>
           </motion.div>
 
+          {/* ════════════════════════════════════════════════════════
+              FLÈCHE CENTRALE ANIMÉE
+          ════════════════════════════════════════════════════════ */}
+          <div className="hidden lg:flex flex-col items-center gap-4 flex-shrink-0">
+            {/* Bulle hint principale */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="
+                flex flex-col items-center gap-3
+                bg-white border border-vert-fonce/15
+                rounded-2xl px-5 py-4
+                shadow-lg shadow-vert-fonce/10
+                max-w-[140px] text-center
+              "
+            >
+              {/* Icône doigt */}
+              <motion.span
+                animate={{ y: [0, -4, 0] }}
+                transition={{
+                  duration: 1.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="text-2xl"
+              >
+                👉
+              </motion.span>
+              <p className="font-poppins font-bold text-vert-fonce text-xs leading-tight">
+                Testez le simulateur !
+              </p>
+              <p className="font-inter text-gray-400 text-[10px] leading-tight">
+                Naviguez dans le menu comme sur votre téléphone
+              </p>
+            </motion.div>
+
+            {/* Flèche SVG animée pointant vers la droite */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.8 }}
+              className="flex flex-col items-center gap-1"
+            >
+              {/* Ligne pointillée verticale */}
+              <motion.div
+                animate={{ scaleY: [1, 0.7, 1], opacity: [0.4, 0.8, 0.4] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="w-px h-8 bg-vert-fonce/30 origin-top"
+              />
+
+              {/* Flèche SVG courbée vers la droite */}
+              <motion.svg
+                viewBox="0 0 80 60"
+                className="w-20 h-14"
+                animate={{ x: [0, 6, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                {/* Courbe */}
+                <path
+                  d="M 10 10 Q 40 5 60 30"
+                  stroke="#29783B"
+                  strokeWidth="2.5"
+                  strokeDasharray="5 3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+                {/* Tête de flèche */}
+                <polygon
+                  points="55,22 68,32 54,38"
+                  fill="#29783B"
+                  opacity="0.8"
+                />
+              </motion.svg>
+
+              {/* Ligne pointillée verticale bas */}
+              <motion.div
+                animate={{ scaleY: [1, 0.7, 1], opacity: [0.4, 0.8, 0.4] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.3,
+                }}
+                className="w-px h-8 bg-vert-fonce/30 origin-top"
+              />
+            </motion.div>
+
+            {/* Bulle gains */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="
+                flex flex-col items-center gap-2
+                bg-orange-vif/8 border border-orange-vif/25
+                rounded-2xl px-5 py-4
+                max-w-[140px] text-center
+              "
+            >
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="text-xl"
+              >
+                🏆
+              </motion.span>
+              <p className="font-poppins font-bold text-orange-vif text-xs leading-tight">
+                Voir les gains
+              </p>
+              <p className="font-inter text-gray-500 text-[10px] leading-tight">
+                Jusqu&apos;à{" "}
+                <span className="font-bold text-orange-vif">15 000 000</span>{" "}
+                FCFA
+              </p>
+              {/* Mini hint navigation */}
+              <div
+                className="
+                mt-1 bg-white border border-orange-vif/20
+                rounded-lg px-2 py-1.5
+                flex flex-col gap-0.5 w-full
+              "
+              >
+                {["① Jeux Là Là Là", "③ Tableau Gains"].map((step) => (
+                  <p
+                    key={step}
+                    className="font-inter text-[9px] text-gray-500 text-left"
+                  >
+                    {step}
+                  </p>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
           {/* ── Colonne droite : Simulateur téléphone ──────────── */}
           <motion.div
             initial={{ opacity: 0, x: 30, y: 20 }}
@@ -779,7 +925,7 @@ export default function USSDSimulator() {
             className="flex-1 flex justify-center"
           >
             <div className="relative">
-              {/* Halo décoratif derrière le téléphone */}
+              {/* Halo décoratif */}
               <div
                 className="absolute inset-0 blur-3xl opacity-20 scale-110"
                 style={{
@@ -808,6 +954,31 @@ export default function USSDSimulator() {
                 "
               >
                 #150*52# Live
+              </motion.div>
+
+              {/* ── Hint mobile (visible seulement sur mobile) ── */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.8 }}
+                className="
+                  lg:hidden
+                  absolute -bottom-14 left-1/2 -translate-x-1/2
+                  flex items-center gap-2 whitespace-nowrap
+                  bg-white border border-vert-fonce/15
+                  rounded-full px-4 py-2 shadow-md
+                "
+              >
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                  className="text-sm"
+                >
+                  👆
+                </motion.span>
+                <span className="font-inter text-xs text-gray-600">
+                  Touchez les options pour naviguer
+                </span>
               </motion.div>
             </div>
           </motion.div>
