@@ -216,7 +216,7 @@ export default function Hero() {
           >
             {/* CTA principal */}
             <motion.a
-              href="tel:*150*52%23"
+              href="tel:#150*52%23"
               variants={pulseVariants}
               animate="animate"
               whileHover={{ scale: 1.02, backgroundColor: "#fa8936" }}
