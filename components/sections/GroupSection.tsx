@@ -167,7 +167,7 @@ export default function GroupSection() {
 
                 {/* Bouton */}
                 <motion.a
-                  href="tel:#150*52%23"
+                  href="tel:#150*52#"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.98 }}
                   className="

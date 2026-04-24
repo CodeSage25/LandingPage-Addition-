@@ -163,7 +163,7 @@ export default function WinnersGallery() {
 
             {/* CTA */}
             <motion.a
-              href="tel:#150*52%23"
+              href="tel:#150*52#"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 16px 48px rgba(244,120,32,0.6)",

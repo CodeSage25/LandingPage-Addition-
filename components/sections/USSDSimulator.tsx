@@ -752,7 +752,7 @@ export default function USSDSimulator() {
                 Prêt à jouer pour de vrai ?
               </p>
               <motion.a
-                href="tel:#150*52%23"
+                href="tel:#150*52#"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="
