@@ -14,7 +14,7 @@ const inter = Inter({
 
 // ── Métadonnées SEO ────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "",
+  title: "Là Là Là — Tente ta chance au #150*52#",
   description:
     "",
   keywords: [
