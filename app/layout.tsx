@@ -16,7 +16,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Là Là Là — Tentez ta chance au #150*52#",
   description:
-    "Jouez au Là Là Là sur Orange Money. Composez le #150*52#, misez 100/200/400 FCFA, additionnez vos 5 numéros et gagnez jusqu'à 15 000 000 FCFA !",
+    "",
   keywords: [
     "Là Là Là",
     "Orange Money",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "#",
+    title: "",
     description: "",
     type: "website",
     locale: "fr_CM",
