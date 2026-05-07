@@ -1,6 +1,7 @@
 // app/page.tsx
 import Hero from "@/components/sections/Hero";
 import HowToPlay from "@/components/sections/HowToPlay";
+import GainsTableSection from "@/components/sections/GainsTableSection";
 import USSDSimulator from "@/components/sections/USSDSimulator";
 import VideoSection from "@/components/sections/VideoSection";
 import GroupSection from "@/components/sections/GroupSection";
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <Hero />
       <HowToPlay />
+      <GainsTableSection />
       <USSDSimulator />
       <VideoSection />
       <GroupSection />

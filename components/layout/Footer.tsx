@@ -268,7 +268,7 @@ export default function Footer() {
               {[
                 {
                   label: "📱 Jouer maintenant",
-                  href: "tel:#150*52%23",
+                  href: "tel:#150*52#",
                   isPhone: true,
                   highlight: true,
                 },

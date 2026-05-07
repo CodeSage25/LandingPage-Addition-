@@ -1,20 +1,13 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 // ── Google Fonts via next/font (auto-hébergé, RGPD OK) ────────────
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -27,10 +20,10 @@ export const metadata: Metadata = {
   keywords: [
     "Là Là Là",
     "Orange Money",
-    "Côte d'Ivoire",
+    "Cameroun",
     "jeu loterie",
     "PMUC",
-    "150*52",
+    "#150*52#",
     "gagner argent mobile",
   ],
   authors: [{ name: "Là Là Là" }],
@@ -42,10 +35,10 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Là Là Là — Tentez ta chance au #150*52#",
-    description: "Gagnez jusqu'à 15 000 000 FCFA avec Orange Money !",
+    title: "#",
+    description: "",
     type: "website",
-    locale: "fr_CI",
+    locale: "fr_CM",
   },
   // Empêche le zoom sur mobile (important pour le simulateur USSD)
   viewport: {
@@ -61,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={`${poppins.variable} ${inter.variable}`}>
+    <html lang="fr" className={inter.variable}>
       <body className="font-inter antialiased overflow-x-hidden">
         {children}
       </body>

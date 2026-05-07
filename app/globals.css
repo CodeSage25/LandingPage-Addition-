@@ -14,10 +14,6 @@
   --sable: #ceaa74;
   --bleu-eau: #5fb0cc;
   --rose: #e7177e;
-
-  /* Fonts injectées via next/font (étape 2) */
-  --font-poppins: "Poppins", sans-serif;
-  --font-inter: "Inter", sans-serif;
 }
 
 /* ── Reset & base ─────────────────────────────────────────────────── */
@@ -49,7 +45,7 @@ body {
 @layer components {
   /* Bouton principal orange */
   .btn-primary {
-    @apply bg-orange-vif text-white font-poppins font-bold 
+    @apply bg-orange-vif text-white font-inter font-bold 
            px-8 py-4 rounded-full 
            transition-all duration-300 
            hover:brightness-110 hover:shadow-lg 
@@ -58,7 +54,7 @@ body {
 
   /* Bouton secondaire vert */
   .btn-secondary {
-    @apply bg-vert-fonce text-white font-poppins font-bold 
+    @apply bg-vert-fonce text-white font-inter font-bold 
            px-8 py-4 rounded-full 
            transition-all duration-300 
            hover:bg-vert-moyen hover:shadow-lg 
@@ -67,7 +63,7 @@ body {
 
   /* Titre section */
   .section-title {
-    @apply font-poppins font-black text-4xl md:text-5xl 
+    @apply font-inter font-black text-4xl md:text-5xl 
            leading-tight tracking-tight;
   }
 

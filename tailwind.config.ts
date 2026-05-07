@@ -25,7 +25,7 @@ const config: Config = {
 
       // ── Typographie ────────────────────────────────────────────────
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
       },
 
